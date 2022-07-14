@@ -8,7 +8,7 @@ const container = document.querySelector('.grid-container');
 newDiv = "";
 
 // Name a variable to be used for size of grid
-gridSize = 50;
+let gridSize = prompt('What size grid do you want?');
 
 // Function to populate grid
 function createGrid() {
