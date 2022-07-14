@@ -1,10 +1,18 @@
+.container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
 .grid-container {
     display: grid;
     width: 800px;
     height: 800px;
+    
 }
 
 .square {
+    display: inline-grid;
     border: 1px solid black;
 }
 
