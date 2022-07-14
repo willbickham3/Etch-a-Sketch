@@ -2,16 +2,23 @@
 const container = document.querySelector('.grid-container');
 
 // name variable to append later
-let newDiv = document.createElement('div');
-newDiv.className = 'square';
-container.appendChild(newDiv)
+    // let newDiv = document.createElement('div');
+    // newDiv.className = 'square';
+    // container.appendChild(newDiv)
+newDiv = "";
 
 // Name a variable to be used for size of grid
-gridSize = prompt('How big would you like your grid?')
+gridSize = 50;
 
 // Function to populate grid
 function createGrid() {
-
+    for (let i = 0; i < gridSize * gridSize; i++) {
+    newDiv = document.createElement('div');
+    newDiv.className = 'square';
+    container.appendChild(newDiv)
+    }
+    container.style.gridTemplateColumns = `repeat(${gridSize}, auto)`;
+    container.style.gridTemplateRows = `repeat(${gridSize}, auto)`;
 }
 
 
