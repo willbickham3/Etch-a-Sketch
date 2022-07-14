@@ -8,10 +8,14 @@ const container = document.querySelector('.grid-container');
 newDiv = "";
 
 // Name a variable to be used for size of grid
-let gridSize = prompt('What size grid do you want?');
+const pixels = document.querySelector('#pixels');
+const gridButton = document.querySelector('.create-grid');
+gridButton.addEventListener('click', createGrid);
+
 
 // Function to populate grid
 function createGrid() {
+    gridSize = pixels.value;
     for (let i = 0; i < gridSize * gridSize; i++) {
     newDiv = document.createElement('div');
     newDiv.className = 'square';
@@ -19,10 +23,11 @@ function createGrid() {
     }
     container.style.gridTemplateColumns = `repeat(${gridSize}, auto)`;
     container.style.gridTemplateRows = `repeat(${gridSize}, auto)`;
+    gridButton.removeEventListener('click', createGrid);
 }
 
 
 
 // Naming button to add event listener
-gridButton = document.querySelector('.create-grid');
-gridButton.addEventListener('click', createGrid)
+//gridButton = document.querySelector('.create-grid');
+//gridButton.addEventListener('click', createGrid)
