@@ -2,19 +2,14 @@ body {
     background-color: grey;
 }
 
-.grid-button {
+.grid-button, .button-container, .reset-button {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+    margin-top: 20px;
     gap: 20px;
 }
 
-.button-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    gap: 20px;
-}
 
 .container {
     display: grid;
@@ -24,8 +19,8 @@ body {
 
 .grid-container {
     display: grid;
-    width: 800px;
-    height: 800px;
+    width: 600px;
+    height: 600px;
     
 }
 
