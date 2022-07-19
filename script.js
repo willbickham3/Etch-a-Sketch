@@ -1,21 +1,24 @@
 // name variable for container
 const container = document.querySelector('.grid-container');
 const myBtns = document.querySelectorAll('button');
+document.getElementById("pixels").defaultValue = '16';
+let resetButton = document.querySelector('.reset-button');
 
 // name variable to append later
     // let newDiv = document.createElement('div');
     // newDiv.className = 'square';
     // container.appendChild(newDiv)
+
 newDiv = "";
 let color = 'black';
+
 // Name a variable to be used for size of grid
 const pixels = document.querySelector('#pixels');
 const gridButton = document.querySelector('.create-grid');
-gridButton.addEventListener('click', createGrid);
 
 
 // Function to populate grid
-function createGrid() {
+function createGrid(gridSize) {
     gridSize = pixels.value;
     let oldSquares = document.querySelectorAll('.square');
     oldSquares.forEach((div) => div.remove());
@@ -62,7 +65,14 @@ function changeColor (event) {
     }
 }
 
+function resetGrid() {
+    let gridSquares = document.querySelectorAll('.square');
+    gridSquares.forEach(gridSquare => gridSquare.style.backgroundColor = '#ffffff');
+}
+
+// Create Default Grid for when page is loaded
+createGrid(16);
+
+gridButton.addEventListener('click', createGrid);
 myBtns.forEach(colorButton => colorButton.addEventListener('click', changeColor))
-// Naming button to add event listener
-//gridButton = document.querySelector('.create-grid');
-//gridButton.addEventListener('click', createGrid)
+resetButton.addEventListener('click', resetGrid)
