@@ -26,12 +26,20 @@ function createGrid() {
     }
     container.style.gridTemplateColumns = `repeat(${gridSize}, auto)`;
     container.style.gridTemplateRows = `repeat(${gridSize}, auto)`;
-    let gridSquares = document.querySelectorAll('div');
-    gridSquares.addEventListener('mouseover', colorGrid);
+    let gridSquares = document.querySelectorAll('.square');
+    gridSquares.forEach(gridSquare => gridSquare.addEventListener('mouseover', colorGrid));
 }
 
 function colorGrid() {
     switch (color) {
+        case 'black':
+            this.style.backgroundColor = '#000000';
+            break
+        case 'white':
+            this.style.backgroundColor = '#ffffff';
+            break
+        case 'random':
+            this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
 
     }
      
