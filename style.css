@@ -2,6 +2,13 @@ body {
     background-color: grey;
 }
 
+.grid-button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
 .button-container {
     display: flex;
     justify-content: center;
