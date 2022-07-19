@@ -9,14 +9,16 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="button-container">
+    <div class="grid-button">     
         <label for="grid-size">Grid Size:</label>
         <input type="number" id="pixels" placeholder="1-100" min="1" max="100">
         <button class="create-grid">Create Grid</button>
-        <button class="black">Black</button>
-        <button class="white">White</button>
-        <button class="random">Random Color</button>
-        <button class="clear">Clear Grid</button>
+    </div>
+    <div class="button-container">
+        <button class="color-button" data-color="black">Black</button>
+        <button class="color-button" data-color="white">White</button>
+        <button class="color-button" data-color="random">Random Color</button>
+        <button class="color-button" data-color="reset">Clear Grid</button>
     </div>
 
     <div class="container">
