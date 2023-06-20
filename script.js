@@ -9,7 +9,6 @@ let resetButton = document.querySelector('.reset-button');
     // newDiv.className = 'square';
     // container.appendChild(newDiv)
 
-newDiv = "";
 let color = 'black';
 
 // Name a variable to be used for size of grid
@@ -23,7 +22,7 @@ function createGrid(gridSize) {
     let oldSquares = document.querySelectorAll('.square');
     oldSquares.forEach((div) => div.remove());
     for (let i = 0; i < gridSize * gridSize; i++) {
-    newDiv = document.createElement('div');
+    let newDiv = document.createElement('div');
     newDiv.className = 'square';
     container.appendChild(newDiv)
     }
@@ -72,6 +71,8 @@ function resetGrid() {
 
 // Create Default Grid for when page is loaded
 createGrid(16);
+
+
 
 gridButton.addEventListener('click', createGrid);
 myBtns.forEach(colorButton => colorButton.addEventListener('click', changeColor))
